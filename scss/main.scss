@@ -1,0 +1,24 @@
+@import '_happy';
+@import '_animations';
+
+button, span, div, i, section, input, nav, footer, article, form {
+	&.bbb { 
+		margin      : 0;
+		padding     : 0;
+		border      : 0;
+		background  : transparent;
+		font-family : inherit;
+		font-size   : 1em;
+		cursor      : pointer;
+		outline: none;
+		display:block;
+	}
+
+	&.bbb-happy {
+		@include bbb-happy();
+
+		&:active {
+			@include bouncy();
+		}	
+	}
+}
